@@ -11,7 +11,7 @@
     - name: Create VLAN External
       bigip_vlan:
         name: "{{ vlan_10_name }}"
-        untagged_interfaces: "{{ vlann10_interface }}"
+        tagged_interfaces: "{{ vlan10_interface }}"
         provider:
           user: admin
           server: "{{ ansible_host }}"
@@ -20,7 +20,7 @@
     - name: Create VLAN Internal
       bigip_vlan:
         name: "{{ vlan_20_name }}"
-        untagged_interfaces: "{{ vlann20_interface }}"
+        tagged_interfaces: "{{ vlan20_interface }}"
         provider:
           user: admin
           server: "{{ ansible_host }}"
